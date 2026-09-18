@@ -1,7 +1,7 @@
-import fourCheeseImg from '../assets/images/four_cheese_pack_1789712578148.jpg';
-import jalapenosImg from '../assets/images/jalapenos_box_1789712595290.jpg';
-import tomatoMozzImg from '../assets/images/tomato_mozz_box_1789712608798.jpg';
-import truffleImg from '../assets/images/truffle_box_1789712621243.jpg';
+import fourCheeseImg from '../assets/images/four_cheese.png';
+import jalapenosImg from '../assets/images/jalapenos.png';
+import tomatoMozzImg from '../assets/images/tom_moz.png';
+import truffleImg from '../assets/images/truffle.png';
 import ambianceImg from '../assets/images/italian_ambiance_1789712634913.jpg';
 import { Product, StoreLocation, FaqItem } from '../types';
 
