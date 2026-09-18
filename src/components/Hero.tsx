@@ -170,7 +170,16 @@ export const Hero: React.FC = () => {
                       src={activeProduct.image}
                       alt={`Firma Italia ${activeProduct.descriptor}`}
                       referrerPolicy="no-referrer"
-                      className="w-[220px] h-[220px] sm:w-[270px] sm:h-[270px] object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.18)] group-hover:scale-105 transition-transform duration-300"
+                      className="
+                        w-[220px] h-[220px]
+                        sm:w-[270px] sm:h-[270px]
+                        rounded-full
+                        object-cover
+                        border-[5px] border-white
+                        shadow-[0_20px_40px_rgba(0,0,0,0.16)]
+                        group-hover:scale-105
+                        transition-transform duration-500
+                      "
                     />
                     {/* Hover hint */}
                     <div className="absolute bottom-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-stone-900/80 text-white text-[11px] px-3 py-1 rounded-full whitespace-nowrap backdrop-blur-xs">

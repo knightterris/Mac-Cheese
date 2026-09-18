@@ -3,12 +3,10 @@ import { ChevronDown, HelpCircle, Sparkles, MessageCircleQuestion } from 'lucide
 import { FAQ_ITEMS } from '../data/productData';
 
 export const FaqSection: React.FC = () => {
-  const [openIds, setOpenIds] = useState<string[]>(['faq-1', 'faq-2']);
+  const [openId, setOpenId] = useState<string | null>('faq-1');
 
   const toggleDropdown = (id: string) => {
-    setOpenIds((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
+      setOpenId((current) => (current === id ? null : id));
   };
 
   return (
@@ -54,47 +52,91 @@ export const FaqSection: React.FC = () => {
           </div>
 
           {/* Right Side: Multiple Question and Answer Attached Dropdowns (Up to 6 Dropdowns) */}
+          {/* Right Side: FAQ Accordion */}
           <div className="lg:col-span-7 space-y-3.5" id="faq-accordion-group">
             {FAQ_ITEMS.map((item, index) => {
-              const isOpen = openIds.includes(item.id);
+              const isOpen = openId === item.id;
+
               return (
                 <div
                   key={item.id}
                   id={`faq-item-${index + 1}`}
-                  className="bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-2xs transition-all duration-200 hover:border-stone-300"
+                  className={`bg-white rounded-2xl border overflow-hidden shadow-2xs
+                    transition-colors duration-300
+                    ${
+                      isOpen
+                        ? 'border-amber-200'
+                        : 'border-stone-200/90 hover:border-stone-300'
+                    }
+                  `}
                 >
                   <button
                     onClick={() => toggleDropdown(item.id)}
-                    className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-hidden"
+                    className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
                     aria-expanded={isOpen}
+                    aria-controls={`faq-answer-${item.id}`}
                   >
                     <div className="flex items-center gap-3.5">
                       <span className="font-editorial text-sm font-bold text-stone-400">
-                        0{index + 1}
+                        {String(index + 1).padStart(2, '0')}
                       </span>
-                      <span className="text-sm sm:text-base font-semibold text-stone-900 hover:text-amber-800 transition-colors">
+
+                      <span
+                        className={`text-sm sm:text-base font-semibold transition-colors duration-300 ${
+                          isOpen
+                            ? 'text-amber-800'
+                            : 'text-stone-900 hover:text-amber-800'
+                        }`}
+                      >
                         {item.question}
                       </span>
                     </div>
+
                     <div
-                      className={`w-7 h-7 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 shrink-0 transition-transform duration-200 ${
-                        isOpen ? 'rotate-180 bg-stone-900 text-white' : ''
-                      }`}
+                      className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0
+                        transition-all duration-500 ease-in-out
+                        ${
+                          isOpen
+                            ? 'rotate-180 bg-stone-900 text-white'
+                            : 'rotate-0 bg-stone-100 text-stone-600'
+                        }
+                      `}
                     >
                       <ChevronDown className="w-4 h-4" />
                     </div>
                   </button>
 
-                  {isOpen && (
-                    <div className="px-6 pb-6 pt-1 text-sm text-stone-600 leading-relaxed border-t border-stone-100 bg-stone-50/40 animate-in fade-in duration-200">
-                      <p>{item.answer}</p>
-                      <div className="mt-3 flex items-center gap-2">
-                        <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-sm bg-white border border-stone-200 text-stone-500">
-                          {item.category}
-                        </span>
+                  {/* Keep this mounted so both opening AND closing animate */}
+                  <div
+                    id={`faq-answer-${item.id}`}
+                    className={`grid transition-[grid-template-rows,opacity] duration-500 ease-in-out ${
+                      isOpen
+                        ? 'grid-rows-[1fr] opacity-100'
+                        : 'grid-rows-[0fr] opacity-0'
+                    }`}
+                    aria-hidden={!isOpen}
+                  >
+                    <div className="overflow-hidden">
+                      <div
+                        className={`px-6 text-sm text-stone-600 leading-relaxed bg-stone-50/40
+                          transition-[padding] duration-500 ease-in-out
+                          ${
+                            isOpen
+                              ? 'pt-4 pb-6 border-t border-stone-100'
+                              : 'pt-0 pb-0'
+                          }
+                        `}
+                      >
+                        <p>{item.answer}</p>
+
+                        <div className="mt-3 flex items-center gap-2">
+                          <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-sm bg-white border border-stone-200 text-stone-500">
+                            {item.category}
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  )}
+                  </div>
                 </div>
               );
             })}

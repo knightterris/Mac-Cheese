@@ -84,7 +84,7 @@ export const FlavoursDetail: React.FC = () => {
                   src={fourCheese.image}
                   alt="Firma Italia Four Cheese Mac & Cheese"
                   referrerPolicy="no-referrer"
-                  className="w-[260px] h-[260px] sm:w-[290px] sm:h-[290px] object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300"
+                  className="w-[260px] h-[260px] sm:w-[290px] sm:h-[290px] rounded-full object-cover drop-shadow-xl hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <span className="text-xs text-stone-500 italic mt-4 font-serif">
@@ -113,7 +113,7 @@ export const FlavoursDetail: React.FC = () => {
                   src={jalapenos.image}
                   alt="Firma Italia Jalapeños Mac & Cheese"
                   referrerPolicy="no-referrer"
-                  className="w-[260px] h-[260px] sm:w-[290px] sm:h-[290px] object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300"
+                  className="w-[260px] h-[260px] sm:w-[290px] sm:h-[290px] rounded-full object-cover drop-shadow-xl hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <span className="text-xs text-stone-500 italic mt-4 font-serif">
@@ -257,7 +257,7 @@ export const FlavoursDetail: React.FC = () => {
                   src={tomatoMozz.image}
                   alt="Firma Italia Tomato Mozzarella Mac & Cheese"
                   referrerPolicy="no-referrer"
-                  className="w-[260px] h-[260px] sm:w-[290px] sm:h-[290px] object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300"
+                  className="w-[260px] h-[260px] sm:w-[290px] sm:h-[290px] rounded-full object-cover drop-shadow-xl hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <span className="text-xs text-stone-500 italic mt-4 font-serif">
@@ -286,7 +286,7 @@ export const FlavoursDetail: React.FC = () => {
                   src={truffle.image}
                   alt="Firma Italia Truffle & Mushrooms Mac & Cheese"
                   referrerPolicy="no-referrer"
-                  className="w-[260px] h-[260px] sm:w-[290px] sm:h-[290px] object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300"
+                  className="w-[260px] h-[260px] sm:w-[290px] sm:h-[290px] rounded-full object-cover drop-shadow-xl hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <span className="text-xs text-stone-500 italic mt-4 font-serif">

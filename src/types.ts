@@ -15,6 +15,12 @@ export interface Product {
   weightGrams: number;
   servings: number;
   spiceLevel?: number;
+
+  marketplaceLinks?: {
+    lazada?: string;
+    shopee?: string;
+    tiktok?: string;
+  };
 }
 
 export interface StoreLocation {

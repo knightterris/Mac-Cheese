@@ -64,7 +64,7 @@ export const FlavoursOverview: React.FC = () => {
                     src={product.image}
                     alt={product.name}
                     referrerPolicy="no-referrer"
-                    className="w-44 h-44 object-contain drop-shadow-md group-hover:scale-108 transition-transform duration-300"
+                    className="w-55 h-55 rounded-full object-cover drop-shadow-md group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 

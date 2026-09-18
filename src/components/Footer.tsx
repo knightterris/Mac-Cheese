@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
               <span className="font-editorial text-3xl font-bold text-white tracking-tight">
-                MC&CHEESE
+                MAC&CHEESE
               </span>
               <div className="flex items-center gap-1 px-2 py-0.5 rounded-sm bg-stone-800 text-[11px] font-semibold text-stone-200 border border-stone-700">
                 <span className="w-1.5 h-2.5 bg-emerald-500 rounded-2xs" />

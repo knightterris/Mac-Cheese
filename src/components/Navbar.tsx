@@ -42,7 +42,7 @@ export const Navbar: React.FC = () => {
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
               <span className="font-editorial text-2xl sm:text-3xl font-bold tracking-tight text-stone-900 group-hover:text-amber-700 transition-colors">
-                MC&CHEESE
+                MAC&CHEESE
               </span>
               <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] uppercase font-semibold tracking-wider bg-stone-100 text-stone-700 border border-stone-300 rounded-sm">
                 <span className="w-1.5 h-2 bg-emerald-600 rounded-2xs inline-block" />
