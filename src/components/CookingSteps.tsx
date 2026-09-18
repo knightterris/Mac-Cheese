@@ -19,10 +19,10 @@ export const CookingSteps: React.FC = () => {
     {
       stepNumber: '02',
       title: 'Get Ready & Cook',
-      italianTitle: 'Pronto e Cuoci in 7 Minuti',
+      italianTitle: 'Pronto e Cuoci in 9-11 Minuti',
       subtitle: 'Simmer effortlessly with only water',
       description:
-        'Pour 500ml (approx. 2 cups) of cold water into a medium saucepan or skillet. Empty the complete pouch contents, bring to a gentle boil, and stir occasionally for 7 to 8 minutes on medium heat until the sauce becomes luxuriously thick and the shell pasta is al dente.',
+        'Pour 500ml (approx. 2 cups) of cold water into a medium saucepan or skillet. Empty the complete pouch contents, bring to a gentle boil, and stir occasionally for 9 to 11 minutes on medium heat until the sauce becomes luxuriously thick and the shell pasta is al dente.',
       tip: 'Zero butter or milk needed. The "All In!" blend naturally emulsifies with water into an unctuous cheese sauce.',
       icon: Flame,
       badge: 'Step 2: Stovetop Simmer',
@@ -51,7 +51,7 @@ export const CookingSteps: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-stone-300/80 text-xs uppercase tracking-widest text-stone-700 font-semibold shadow-2xs">
             <Clock className="w-3.5 h-3.5 text-amber-700" />
-            <span>Ready in 7 Minutes</span>
+            <span>Ready in 9-11 Minutes</span>
           </div>
           <h2 className="font-editorial text-4xl sm:text-5xl md:text-6xl font-semibold text-stone-950 tracking-tight">
             Everyone Can Cook at Ease with Simple Steps and Serve

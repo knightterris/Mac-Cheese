@@ -29,7 +29,7 @@ export const AttractionBanner: React.FC = () => {
 
         {/* Big Text with Authentic Italian Artistic Vibe */}
         <div className="space-y-4">
-          <span className="block font-italiana text-xl sm:text-2xl md:text-3xl text-amber-100/90 tracking-wide italic">
+          <span className="block font-italiana text-xl sm:text-2xl md:text-3xl text-amber-500 tracking-wide italic">
             L'Arte Della Semplicità
           </span>
           <h2 className="font-editorial text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[1.05] drop-shadow-lg">
@@ -38,7 +38,7 @@ export const AttractionBanner: React.FC = () => {
           </h2>
         </div>
 
-        <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-stone-200 font-light leading-relaxed drop-shadow-sm">
+        <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-stone-600 font-light leading-relaxed drop-shadow-sm">
           Every pasta shell is cast in Italy from premium durum wheat semolina, 
           ribbed to embrace genuine melted cheese in each fold. 
           No shortcuts. No compromises. Just pure Italian culinary passion.

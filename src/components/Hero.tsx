@@ -82,7 +82,7 @@ export const Hero: React.FC = () => {
             <p className="text-base sm:text-lg text-stone-600 font-normal leading-relaxed max-w-2xl">
               Straight from Lombardy to your dining table. Crafted using pure Italian durum wheat ribbed shells 
               and authentic dehydrated cheese sauces. Perfectly balanced, intensely savoury, and effortlessly ready 
-              in just 7 minutes of gentle simmering.
+              in just 9-11 minutes of gentle simmering.
             </p>
 
             {/* Value Highlights Pill Grid */}
@@ -94,7 +94,7 @@ export const Hero: React.FC = () => {
               </div>
               <div>
                 <span className="block text-xs uppercase tracking-wider text-stone-400 font-medium">Preparation</span>
-                <span className="text-base font-semibold text-stone-900">7–8 Minutes</span>
+                <span className="text-base font-semibold text-stone-900">9–11 Minutes</span>
                 <span className="block text-[11px] text-stone-500">One-pot stovetop</span>
               </div>
               <div>

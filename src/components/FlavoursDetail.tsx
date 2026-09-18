@@ -66,7 +66,7 @@ export const FlavoursDetail: React.FC = () => {
               <div className="pt-4 border-t border-stone-100 flex flex-wrap items-center gap-4 text-xs text-stone-600">
                 <span className="inline-flex items-center gap-1 font-semibold text-stone-900">
                   <Clock className="w-3.5 h-3.5 text-amber-700" />
-                  7 min stovetop
+                  9-11 min stovetop
                 </span>
                 <span>•</span>
                 <span>184g net weight</span>
@@ -168,7 +168,7 @@ export const FlavoursDetail: React.FC = () => {
               <div className="pt-4 border-t border-stone-100 flex flex-wrap items-center gap-4 text-xs text-stone-600">
                 <span className="inline-flex items-center gap-1 font-semibold text-stone-900">
                   <Clock className="w-3.5 h-3.5 text-red-700" />
-                  7 min stovetop
+                  9-11 min stovetop
                 </span>
                 <span>•</span>
                 <span>Zesty medium heat</span>
@@ -239,7 +239,7 @@ export const FlavoursDetail: React.FC = () => {
               <div className="pt-4 border-t border-stone-100 flex flex-wrap items-center gap-4 text-xs text-stone-600">
                 <span className="inline-flex items-center gap-1 font-semibold text-stone-900">
                   <Clock className="w-3.5 h-3.5 text-emerald-700" />
-                  7 min stovetop
+                  9-11 min stovetop
                 </span>
                 <span>•</span>
                 <span>Sun-ripened Mediterranean tomato</span>
@@ -340,7 +340,7 @@ export const FlavoursDetail: React.FC = () => {
               <div className="pt-4 border-t border-stone-100 flex flex-wrap items-center gap-4 text-xs text-stone-600">
                 <span className="inline-flex items-center gap-1 font-semibold text-stone-900">
                   <Clock className="w-3.5 h-3.5 text-stone-800" />
-                  7 min stovetop
+                  9-11 min stovetop
                 </span>
                 <span>•</span>
                 <span>Umbrian black truffle shavings</span>
