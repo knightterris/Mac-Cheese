@@ -13,7 +13,7 @@ export const Hero: React.FC = () => {
     if (!autoplay) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % PRODUCTS.length);
-    }, 6000);
+    }, 2000);
     return () => clearInterval(interval);
   }, [autoplay]);
 
