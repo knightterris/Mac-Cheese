@@ -22,7 +22,7 @@ export const FlavoursOverview: React.FC = () => {
           </h2>
 
           <p className="text-base sm:text-lg text-stone-600 font-normal leading-relaxed">
-            Four distinct gastronomic expressions crafted in Lombardy.
+            Four distinct gastronomic expressions crafted in Italy.
             Select any flavour below to immediately explore its recipe profile,
             tasting nuances, and preparation details.
           </p>
