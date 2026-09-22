@@ -25,7 +25,7 @@ export const PRODUCTS: Product[] = [
     bullets: [
       'Masterfully blended with four classic Italian cheeses crafted to melt into an unctuous, silky coating without clumping.',
       'Bronze-die shell pasta engineered with deep ridges to trap maximum cheese sauce in every single bite.',
-      'All-in-one pouch convenience — zero butter, milk, or extra seasoning needed to achieve restaurant-grade Italian creaminess.',
+      'All-in-one pouch convenience — no butter, milk, or extra seasoning needed for rich, restaurant-style Italian creaminess. Delicious on its own, or finish with your favourite toppings to make it your own.',
     ],
     cookTimeMinutes: 9-11,
     weightGrams: 184,
