@@ -1,0 +1,6 @@
+{
+  "name": "MC&CHEESE | Authentic Italian Mac & Cheese",
+  "description": "Artistic and elegant Italian product showcase for Firma Italia MC&CHEESE featuring four signature flavours, easy cooking guide, and retail availability.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
