@@ -51,9 +51,9 @@ export const PRODUCTS: Product[] = [
     shortDesc: 'Vibrant sun-drenched jalapeño pepper heat carefully tempered by soothing sweet cream and rich cheese pasta shells.',
     tastingNotes: ['Zesty Jalapeño Kick', 'Warm Chili Aroma'],
     bullets: [
-      'Infused with real sun-dried jalapeño flakes and aromatic spices that awaken your palate with an authentic, warming tingle.',
+      'Infused with jalapeño flakes and aromatic spices that awaken your palate with an authentic, warming tingle.',
       'Balanced heat profile calibrated so the piquant kick enhances the savory Italian cheese notes without overpowering them.',
-      'Perfect comfort meal for spice lovers desiring gourmet pasta with a lively, bold international twist in just 7 minutes.',
+      'Perfect comfort meal for spice lovers desiring gourmet pasta with a lively, bold international twist in just 9-11 minutes.',
     ],
     cookTimeMinutes: 9-11,
     weightGrams: 184,
