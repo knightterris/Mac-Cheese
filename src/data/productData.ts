@@ -446,7 +446,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   // },
 
   {
-    id: 'faq-6',
+    id: 'faq-4',
     question: 'Can I prepare MAC&CHEESE in the microwave?',
     answer: 'Yes. Pour 500 ml of unsalted water into a suitable microwave-safe container and bring the water to a boil. Add the contents of the pouch and stir. Microwave at 800 W for approximately 9–11 minutes, until the water is fully absorbed. Cooking time may vary depending on your microwave. For an extra indulgent finish, you may add butter and grated Italian Parmesan cheese, then stir and serve.',
     category: 'Preparation',
