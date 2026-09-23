@@ -48,7 +48,7 @@ export const PRODUCTS: Product[] = [
     badgeBg: 'bg-red-100 text-red-900 border-red-300',
     textColor: 'text-red-700',
     headline: 'Fiery Crisp Jalapeño Meets Smooth Italian Creaminess',
-    shortDesc: 'Vibrant jalapeño pepper heat carefully tempered by soothing sweet cream and rich cheese pasta shells.',
+    shortDesc: 'Vibrant jalapeño pepper heat carefully tempered by soothing cream and rich cheese pasta shells.',
     tastingNotes: ['Zesty Jalapeño Kick', 'Warm Chili Aroma'],
     bullets: [
       'Infused with jalapeño flakes and aromatic spices that awaken your palate with an authentic, warming tingle.',
