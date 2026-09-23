@@ -114,13 +114,13 @@ export const Hero: React.FC = () => {
                 <span>Discover 4 Flavours</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
-              <a
+              {/* <a
                 href="#locations"
                 id="hero-locations-cta"
                 className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-medium tracking-wide text-stone-800 bg-white hover:bg-stone-100 border border-stone-300 rounded-full transition-all duration-300"
               >
                 <span>Gourmet Market Locations</span>
-              </a>
+              </a> */}
             </div>
 
             {/* Current Selected Flavor Preview Tag */}
