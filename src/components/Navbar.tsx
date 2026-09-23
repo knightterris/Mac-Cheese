@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu, X, Building2 } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
@@ -10,10 +10,19 @@ export const Navbar: React.FC = () => {
       setScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Prevent page scrolling while mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { label: 'The Collection', href: '#hero' },
@@ -24,74 +33,149 @@ export const Navbar: React.FC = () => {
     { label: 'Before Your Experience', href: '#faq' },
   ];
 
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header
       id="main-navigation"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-[#FAF8F5]/90 backdrop-blur-md shadow-xs border-b border-stone-200/80 py-3.5'
-          : 'bg-[#FAF8F5]/60 backdrop-blur-xs py-5'
-      }`}
+      className={`
+        fixed
+        top-0
+        left-0
+        right-0
+        z-50
+        transition-all
+        duration-300
+        ${
+          scrolled
+            ? `
+              bg-[#FAF8F5]/95
+              backdrop-blur-xl
+              border-b
+              border-stone-200/80
+              shadow-sm
+              py-3
+            `
+            : `
+              bg-[#FAF8F5]/90
+              backdrop-blur-md
+              py-4
+              sm:py-5
+            `
+        }
+      `}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-
-        {/* Brand Logo & Italian Origin Seal */}
+      <div
+        className="
+          max-w-[1440px]
+          mx-auto
+          px-4
+          sm:px-6
+          lg:px-8
+          xl:px-10
+          flex
+          items-center
+          justify-between
+          gap-4
+        "
+      >
+        {/* =====================================================
+            BRAND
+        ===================================================== */}
         <a
           href="#hero"
-          className="flex items-center gap-3 group"
+          onClick={closeMobileMenu}
           id="nav-brand-logo"
+          aria-label="MAC&CHEESE — Back to top"
+          className="
+            group
+            flex
+            items-center
+            shrink-0
+          "
         >
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2">
+          <div
+            className="
+              font-editorial
+              font-bold
+              tracking-[-0.035em]
+              leading-none
+              whitespace-nowrap
+              text-[1.65rem]
+              sm:text-[1.9rem]
+              md:text-[2rem]
+              xl:text-[2.1rem]
+              transition-transform
+              duration-300
+              group-hover:scale-[1.015]
+            "
+          >
+            {/* Italian-inspired wordmark */}
+            <span className="text-[#008C45] transition-colors duration-300">
+              MAC
+            </span>
 
-              <span className="font-editorial text-2xl sm:text-3xl font-bold tracking-tight text-stone-900 group-hover:text-amber-700 transition-colors">
-                MAC&CHEESE
-              </span>
+            <span className="text-stone-900 mx-[1px]">
+              &
+            </span>
 
-              {/* Italian Badge */}
-              <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] uppercase font-semibold tracking-wider bg-stone-100 text-stone-700 border border-stone-300 rounded-sm">
-
-                <span className="w-1.5 h-2 bg-emerald-600 rounded-2xs inline-block" />
-
-                <span className="w-1.5 h-2 bg-white border border-stone-200 rounded-2xs inline-block" />
-
-                <span className="w-1.5 h-2 bg-rose-600 rounded-2xs inline-block" />
-
-                <span className="ml-1">
-                  Italia
-                </span>
-
-              </span>
-
-            </div>
+            <span className="text-[#CD212A] transition-colors duration-300">
+              CHEESE
+            </span>
           </div>
         </a>
 
+        {/* =====================================================
+            DESKTOP NAVIGATION
 
-        {/* Desktop Navigation */}
+            xl breakpoint prevents links becoming crowded on
+            tablets and smaller laptops.
+        ===================================================== */}
         <nav
-          className="hidden lg:flex items-center gap-7 text-xs font-medium uppercase tracking-wider text-stone-700"
           id="desktop-nav-menu"
+          aria-label="Main navigation"
+          className="
+            hidden
+            xl:flex
+            items-center
+            justify-center
+            gap-4
+            2xl:gap-7
+            flex-1
+            text-[10px]
+            2xl:text-xs
+            font-medium
+            uppercase
+            tracking-[0.08em]
+            2xl:tracking-wider
+            text-stone-700
+          "
         >
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               className="
-                hover:text-amber-800
-                transition-colors
-                py-1
                 relative
+                whitespace-nowrap
+                py-2
+                transition-colors
+                duration-200
+                hover:text-amber-800
+
                 after:content-['']
                 after:absolute
-                after:bottom-0
                 after:left-0
+                after:bottom-0
                 after:w-0
                 after:h-px
                 after:bg-amber-800
-                hover:after:w-full
                 after:transition-all
-                after:duration-200
+                after:duration-300
+
+                hover:after:w-full
               "
             >
               {link.label}
@@ -99,10 +183,10 @@ export const Navbar: React.FC = () => {
           ))}
         </nav>
 
-
-        {/* Wholesale CTA */}
-        <div className="hidden sm:flex items-center">
-
+        {/* =====================================================
+            DESKTOP WHOLESALE BUTTON
+        ===================================================== */}
+        <div className="hidden xl:flex items-center shrink-0">
           <a
             href="#wholesale"
             id="nav-wholesale-cta"
@@ -110,153 +194,268 @@ export const Navbar: React.FC = () => {
               group
               inline-flex
               items-center
+              justify-center
               gap-2
-              px-5
+              px-4
+              2xl:px-5
               py-2.5
-              text-xs
+              text-[10px]
+              2xl:text-xs
               font-semibold
               uppercase
               tracking-wider
+              whitespace-nowrap
               text-white
               bg-stone-900
               hover:bg-amber-800
               rounded-full
               transition-all
               duration-300
-              shadow-xs
+              shadow-sm
               hover:shadow-md
+              hover:-translate-y-px
             "
           >
             <Building2
               className="
                 w-3.5
                 h-3.5
+                shrink-0
                 transition-transform
                 duration-300
                 group-hover:-translate-y-0.5
               "
             />
 
-            <span>
-              Wholesale
-            </span>
+            <span>Wholesale</span>
           </a>
-
         </div>
 
-
-        {/* Mobile Menu Button */}
-        <div className="lg:hidden flex items-center">
-
+        {/* =====================================================
+            TABLET / MOBILE MENU BUTTON
+        ===================================================== */}
+        <div className="xl:hidden flex items-center shrink-0">
           <button
             id="mobile-menu-toggle-btn"
             type="button"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
             className="
-              p-2
-              rounded-lg
+              w-10
+              h-10
+              sm:w-11
+              sm:h-11
+              flex
+              items-center
+              justify-center
+              rounded-full
               text-stone-800
+              border
+              border-stone-200
+              bg-white/70
               hover:bg-stone-100
-              focus:outline-hidden
+              hover:border-stone-300
+              transition-all
+              duration-200
+              focus:outline-none
+              focus-visible:ring-2
+              focus-visible:ring-amber-700
+              focus-visible:ring-offset-2
             "
-            aria-label="Toggle navigation menu"
+            aria-label={
+              mobileMenuOpen
+                ? 'Close navigation menu'
+                : 'Open navigation menu'
+            }
             aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
             )}
           </button>
-
         </div>
-
       </div>
 
-
-      {/* Mobile Drawer */}
-      {mobileMenuOpen && (
-
+      {/* =======================================================
+          MOBILE / TABLET DRAWER
+      ======================================================= */}
+      <div
+        id="mobile-navigation"
+        className={`
+          xl:hidden
+          absolute
+          top-full
+          left-0
+          right-0
+          overflow-hidden
+          transition-all
+          duration-300
+          ease-out
+          ${
+            mobileMenuOpen
+              ? 'max-h-[calc(100vh-70px)] opacity-100 visible'
+              : 'max-h-0 opacity-0 invisible'
+          }
+        `}
+      >
         <div
           className="
-            lg:hidden
-            bg-[#FAF8F5]
+            bg-[#FAF8F5]/98
+            backdrop-blur-xl
+            border-t
             border-b
             border-stone-200
-            px-6
-            py-5
-            shadow-lg
-            space-y-4
-            animate-in
-            fade-in
-            duration-200
+            shadow-xl
           "
         >
+          <div
+            className="
+              max-w-7xl
+              mx-auto
+              px-5
+              sm:px-8
+              py-6
+              sm:py-8
+              max-h-[calc(100vh-80px)]
+              overflow-y-auto
+            "
+          >
+            {/* Mobile navigation links */}
+            <nav
+              aria-label="Mobile navigation"
+              className="
+                flex
+                flex-col
+              "
+            >
+              {navLinks.map((link, index) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMobileMenu}
+                  className="
+                    group
+                    flex
+                    items-center
+                    justify-between
+                    gap-4
+                    py-4
+                    border-b
+                    border-stone-200/80
+                    text-stone-800
+                    hover:text-amber-800
+                    transition-colors
+                    duration-200
+                  "
+                >
+                  <div className="flex items-center gap-4">
+                    <span
+                      className="
+                        font-editorial
+                        text-sm
+                        text-stone-400
+                        group-hover:text-amber-700
+                        transition-colors
+                      "
+                    >
+                      0{index + 1}
+                    </span>
 
-          {/* Mobile Navigation Links */}
-          <div className="flex flex-col space-y-3 text-sm font-medium tracking-wide text-stone-800">
+                    <span
+                      className="
+                        text-sm
+                        sm:text-base
+                        font-medium
+                        tracking-wide
+                      "
+                    >
+                      {link.label}
+                    </span>
+                  </div>
 
-            {navLinks.map((link) => (
+                  <span
+                    className="
+                      text-stone-300
+                      group-hover:text-amber-700
+                      group-hover:translate-x-1
+                      transition-all
+                      duration-200
+                    "
+                  >
+                    →
+                  </span>
+                </a>
+              ))}
+            </nav>
 
+            {/* Mobile Wholesale CTA */}
+            <div className="pt-6">
               <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
+                href="#wholesale"
+                onClick={closeMobileMenu}
                 className="
-                  py-1.5
-                  border-b
-                  border-stone-100
-                  hover:text-amber-800
-                  transition-colors
+                  group
+                  w-full
+                  flex
+                  items-center
+                  justify-center
+                  gap-2.5
+                  px-5
+                  py-3.5
+                  text-xs
+                  sm:text-sm
+                  font-semibold
+                  uppercase
+                  tracking-wider
+                  bg-stone-900
+                  hover:bg-amber-800
+                  text-white
+                  rounded-full
+                  transition-all
+                  duration-300
+                  shadow-sm
                 "
               >
-                {link.label}
+                <Building2
+                  className="
+                    w-4
+                    h-4
+                    transition-transform
+                    duration-300
+                    group-hover:-translate-y-0.5
+                  "
+                />
+
+                <span>Wholesale Enquiries</span>
               </a>
+            </div>
 
-            ))}
-
-          </div>
-
-
-          {/* Mobile Wholesale CTA */}
-          <div className="pt-2">
-
-            <a
-              href="#wholesale"
-              onClick={() => setMobileMenuOpen(false)}
+            {/* Italian origin detail */}
+            <div
               className="
-                group
-                w-full
+                mt-6
                 flex
                 items-center
                 justify-center
                 gap-2
-                px-4
-                py-3
-                text-xs
-                font-semibold
+                text-[10px]
+                sm:text-[11px]
                 uppercase
-                tracking-wider
-                bg-stone-900
-                hover:bg-amber-800
-                text-white
-                rounded-full
-                transition-all
-                duration-300
+                tracking-[0.18em]
+                text-stone-400
               "
             >
-              <Building2 className="w-4 h-4" />
+              <span className="w-4 h-px bg-[#008C45]" />
 
-              <span>
-                Wholesale Enquiries
-              </span>
-            </a>
+              <span>Authentic Italian Mac & Cheese</span>
 
+              <span className="w-4 h-px bg-[#CD212A]" />
+            </div>
           </div>
-
         </div>
-
-      )}
+      </div>
     </header>
   );
 };
