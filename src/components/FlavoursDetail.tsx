@@ -548,9 +548,9 @@ export const FlavoursDetail: React.FC = () => {
                     9-11 min stovetop
                   </span>
 
-                  <span>•</span>
+                  {/* <span>•</span>
 
-                  <span>Zesty medium heat</span>
+                  <span>Zesty medium heat</span> */}
 
                   <span>•</span>
 
@@ -689,9 +689,9 @@ export const FlavoursDetail: React.FC = () => {
                     9-11 min stovetop
                   </span>
 
-                  <span>•</span>
+                  {/* <span>•</span>
 
-                  <span>Sun-ripened Mediterranean tomato</span>
+                  <span>Sun-ripened Mediterranean tomato</span> */}
 
                   <span>•</span>
 
@@ -1044,10 +1044,10 @@ export const FlavoursDetail: React.FC = () => {
                     <Clock className="w-3.5 h-3.5 text-stone-800" />
                     9-11 min stovetop
                   </span>
-
+{/* 
                   <span>•</span>
 
-                  <span>Umbrian black truffle shavings</span>
+                  <span>Umbrian black truffle shavings</span> */}
 
                   <span>•</span>
 

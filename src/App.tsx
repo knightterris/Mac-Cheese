@@ -37,14 +37,12 @@ export default function App() {
         {/* 6. Big section with big text and elegant background for attraction */}
         <AttractionBanner />
 
-        {/* 7. Retail announcement:
+        {/* 7. Products will be available on lazada, shopee, tiktok soon (coming soon section with 3 buttons for each product) */}
+        <MarketplacesSection />
+        {/* 8. Retail announcement:
                "Your new favourite. Coming to your neighbourhood. Discover MC&CHEESE at selected Gourmet Market locations from 24 September 2026."
                + developer editable and client clickable location section with 4 places */}
         <RetailAnnouncement />
-
-        {/* 8. Products will be available on lazada, shopee, tiktok soon (coming soon section with 3 buttons for each product) */}
-        <MarketplacesSection />
-
         {/* 9. Wholesale & business enquiries */}
         <WholesaleSection />
 

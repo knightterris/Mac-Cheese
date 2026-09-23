@@ -12,7 +12,7 @@ export const CookingSteps: React.FC = () => {
       subtitle: 'Select your preferred gourmet recipe',
       description:
         'Select from Four Cheese, Exciting Jalapeños, Tomato Mozzarella, or Truffle & Mushrooms to match your craving or dining occasion.',
-      tip: 'Each box contains 184g net weight, perfectly yielding 2 generous restaurant portions.',
+      tip: 'Each box contains 184g net weight, perfectly yielding around 3 portions.',
       icon: ChefHat,
       badge: 'Step 1: Selection',
     },
@@ -22,7 +22,7 @@ export const CookingSteps: React.FC = () => {
       italianTitle: 'Pronto e Cuoci in 9-11 Minuti',
       subtitle: 'Simmer effortlessly with only water',
       description:
-        'Pour 500ml (approx. 2 cups) of cold water into a medium saucepan or skillet. Empty the complete pouch contents, bring to a gentle boil, and stir occasionally for 9 to 11 minutes on medium heat until the sauce becomes luxuriously thick and the shell pasta is al dente.',
+        'Pour 560ml (approx. 2 cups) of cold water into a medium saucepan or skillet. Bring to a gentle boil, empty the complete pouch contents, and stir occasionally for 9 to 11 minutes on medium heat until the sauce becomes luxuriously thick and the shell pasta is al dente.',
       tip: 'The "All In!" blend naturally emulsifies with water into an unctuous cheese sauce, and even better with your favourite toppings.',
       icon: Flame,
       badge: 'Step 2: Stovetop Simmer',
@@ -139,7 +139,7 @@ export const CookingSteps: React.FC = () => {
             </div>
             <div>
               <h4 className="font-editorial text-xl font-bold text-stone-900">
-                The Golden Formula: 1 Pouch + 500ml Water
+                The Golden Formula: 1 Pouch + 560ml Water
               </h4>
               <p className="text-xs sm:text-sm text-stone-500">
                 No colander needed. The pasta cooks directly in the sauce, absorbing every ounce of flavour.

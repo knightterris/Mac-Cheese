@@ -46,20 +46,45 @@ export const AttractionBanner: React.FC = () => {
           No shortcuts. No compromises. Just pure Italian culinary passion.
         </p>
 
-        {/* Three Aesthetic Heritage Pillars */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto pt-6 border-t border-white/15">
-          <div className="space-y-1">
-            <span className="block text-2xl font-editorial font-bold text-amber-200">1968</span>
-            <span className="text-xs uppercase tracking-widest text-stone-300">Monza e Brianza Roots</span>
-          </div>
+        {/* Three Aesthetic Heritage Pillar */}
+        {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto pt-6 border-t border-white/15">
           <div className="space-y-1">
             <span className="block text-2xl font-editorial font-bold text-amber-200">100%</span>
             <span className="text-xs uppercase tracking-widest text-stone-300">Durum Wheat Semolina</span>
           </div>
           <div className="space-y-1">
+            <span className="block text-2xl font-editorial font-bold text-amber-200">1968</span>
+            <span className="text-xs uppercase tracking-widest text-stone-300">Monza e Brianza Roots</span>
+          </div>
+          <div className="space-y-1">
             <span className="block text-2xl font-editorial font-bold text-amber-200">7 Min</span>
             <span className="text-xs uppercase tracking-widest text-stone-300">Effortless Perfection</span>
           </div>
+        </div> */}
+
+        {/* Two Aesthetic Heritage Pillars */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto pt-6 border-t border-white/15">
+          
+          {/* Durum Wheat */}
+          <div className="space-y-1 text-center">
+            <span className="block text-2xl font-editorial font-bold text-amber-200">
+              100%
+            </span>
+            <span className="text-xs uppercase tracking-widest text-stone-300">
+              Durum Wheat Semolina
+            </span>
+          </div>
+
+          {/* Preparation */}
+          <div className="space-y-1 text-center">
+            <span className="block text-2xl font-editorial font-bold text-amber-200">
+              9-11 Mins
+            </span>
+            <span className="text-xs uppercase tracking-widest text-stone-300">
+              Effortless Perfection
+            </span>
+          </div>
+
         </div>
 
       </div>

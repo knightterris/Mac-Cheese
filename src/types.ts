@@ -25,6 +25,19 @@ export interface Product {
   };
 }
 
+export interface StoreBranch {
+  id: string;
+  name: string;
+  floorZone: string;
+  address: string;
+  hours: string;
+  transitTip: string;
+  mapCoordinates?: {
+    lat: number;
+    lng: number;
+  };
+}
+
 export interface StoreLocation {
   id: string;
   name: string;
@@ -33,10 +46,20 @@ export interface StoreLocation {
   city: string;
   launchDate: string;
   hours: string;
-  status: 'Available 24 Sept 2026' | 'Grand Launch' | 'Featured Showcase';
+  status:
+    | 'Available 24 Sept 2026'
+    | 'Grand Launch'
+    | 'Featured Showcase';
+
   address: string;
   transitTip: string;
-  mapCoordinates: { lat: number; lng: number };
+
+  mapCoordinates?: {
+    lat: number;
+    lng: number;
+  };
+
+  branches?: StoreBranch[];
 }
 
 export interface FaqItem {

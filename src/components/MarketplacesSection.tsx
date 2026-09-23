@@ -490,8 +490,8 @@ export const MarketplacesSection: React.FC = () => {
                 className="
                   grid
                   grid-cols-1
-                  sm:grid-cols-2
-                  lg:grid-cols-4
+                  sm:grid-cols-1
+                  lg:grid-cols-3
                   gap-3
                   w-full
                 "
@@ -620,7 +620,7 @@ export const MarketplacesSection: React.FC = () => {
                     GOURMET MARKET
                     ============================================= */}
 
-                <a
+                {/* <a
                   href="#retail-locations"
                   className="
                     group
@@ -699,7 +699,7 @@ export const MarketplacesSection: React.FC = () => {
                     "
                   />
 
-                </a>
+                </a> */}
 
               </div>
 

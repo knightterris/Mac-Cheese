@@ -128,25 +128,136 @@ export const FlavoursOverview: React.FC = () => {
                 </div>
 
                 {/* Tasting Notes */}
-                <div className="flex flex-wrap items-center justify-center gap-1.5 mt-4">
-                  {product.tastingNotes.slice(0, 2).map((note) => (
-                    <span
-                      key={note}
-                      className="
-                        text-[10px]
-                        font-medium
-                        px-2
-                        py-0.5
-                        rounded-md
-                        bg-stone-50
-                        text-stone-600
-                        border
-                        border-stone-200/80
-                      "
-                    >
-                      {note}
-                    </span>
-                  ))}
+                {/* Tasting Notes */}
+                <div className="mt-5">
+                  <p className="
+                    text-[9px]
+                    uppercase
+                    tracking-[0.18em]
+                    font-bold
+                    text-stone-400
+                    text-center
+                    mb-3
+                  ">
+                    Tasting Notes
+                  </p>
+
+                  {/* Four Cheese & Truffle: 2 columns × 2 rows */}
+                  {(product.id === 'four-cheese' || product.id === 'truffle-mushroom') && (
+                    <div className="grid grid-cols-2 gap-2">
+                      {product.tastingNotes.slice(0, 4).map((note) => (
+                        <div
+                          key={note}
+                          className="
+                            min-h-[25px]
+                            px-2.5
+                            py-2
+                            rounded-lg
+                            bg-stone-50/80
+                            border
+                            border-stone-200/80
+                            flex
+                            items-center
+                            justify-center
+                            text-center
+                            transition-all
+                            duration-300
+                            group-hover:border-stone-300
+                            group-hover:bg-stone-50
+                          "
+                        >
+                          <span className="
+                            text-[10px]
+                            leading-[1.25]
+                            font-medium
+                            text-stone-600
+                          ">
+                            {note}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Jalapeños: exactly 2 rows */}
+                  {product.id === 'jalapenos' && (
+                    <div className="grid grid-cols-1 gap-2">
+                      {[
+                        product.tastingNotes[0], // Zesty Jalapeño Kick
+                        product.tastingNotes[1], // Warm Chili Aroma
+                      ].map((note) => (
+                        <div
+                          key={note}
+                          className="
+                            min-h-[25px]
+                            px-4
+                            py-2
+                            rounded-lg
+                            bg-stone-50/80
+                            border
+                            border-stone-200/80
+                            flex
+                            items-center
+                            justify-center
+                            text-center
+                            transition-all
+                            duration-300
+                            group-hover:border-stone-300
+                            group-hover:bg-stone-50
+                          "
+                        >
+                          <span className="
+                            text-[10px]
+                            leading-[1.25]
+                            font-medium
+                            text-stone-600
+                          ">
+                            {note}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Tomato Mozzarella: exactly 2 rows */}
+                  {product.id === 'tomato-mozzarella' && (
+                    <div className="grid grid-cols-1 gap-2">
+                      {[
+                        product.tastingNotes[0], // Tomato
+                        product.tastingNotes[1], // Mozzarella
+                      ].map((note) => (
+                        <div
+                          key={note}
+                          className="
+                            min-h-[25px]
+                            px-4
+                            py-2
+                            rounded-lg
+                            bg-stone-50/80
+                            border
+                            border-stone-200/80
+                            flex
+                            items-center
+                            justify-center
+                            text-center
+                            transition-all
+                            duration-300
+                            group-hover:border-stone-300
+                            group-hover:bg-stone-50
+                          "
+                        >
+                          <span className="
+                            text-[10px]
+                            leading-[1.25]
+                            font-medium
+                            text-stone-600
+                          ">
+                            {note}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 {/* Retail Price */}
