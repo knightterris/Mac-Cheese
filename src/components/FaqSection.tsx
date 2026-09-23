@@ -23,11 +23,11 @@ export const FaqSection: React.FC = () => {
 
             <div className="space-y-3">
               <h2 className="font-editorial text-4xl sm:text-5xl lg:text-6xl font-semibold text-stone-950 tracking-tight leading-[1.08]">
-                Before Your Experience
+                FAQ
               </h2>
-              <p className="font-serif italic text-lg text-amber-900">
+              {/* <p className="font-serif italic text-lg text-amber-900">
                 Prima Della Tua Esperienza
-              </p>
+              </p> */}
             </div>
 
             <p className="text-stone-600 text-base leading-relaxed">

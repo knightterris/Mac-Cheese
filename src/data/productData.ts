@@ -31,9 +31,9 @@ export const PRODUCTS: Product[] = [
     weightGrams: 184,
     servings: 2-3,
     marketplaceLinks: {
-      lazada: '',
-      shopee: '',
-      tiktok: '',
+      lazada: 'https://www.lazada.co.th/products/i16254749362.html',
+      shopee: 'https://shopee.co.th/product/1468323663/42934735846/',
+      tiktok: 'https://shop.tiktok.com/th/pdp/1737194706953471120',
     },
   },
   {
@@ -60,9 +60,9 @@ export const PRODUCTS: Product[] = [
     servings: 2-3,
     spiceLevel: 2,
     marketplaceLinks: {
-      lazada: '',
-      shopee: '',
-      tiktok: '',
+      lazada: 'https://www.lazada.co.th/products/i16255792640.html',
+      shopee: 'https://shopee.co.th/product/1468323663/46568333985/',
+      tiktok: 'https://shop.tiktok.com/th/pdp/1737194782981129360',
     },
   },
   {
@@ -88,9 +88,9 @@ export const PRODUCTS: Product[] = [
     weightGrams: 184,
     servings: 2-3,
     marketplaceLinks: {
-      lazada: '',
-      shopee: '',
-      tiktok: '',
+      lazada: 'https://www.lazada.co.th/products/i16254747654.html',
+      shopee: 'https://shopee.co.th/product/1468323663/47768348011/',
+      tiktok: 'https://shop.tiktok.com/th/pdp/1737194785181959312',
     },
   },
   {
@@ -116,9 +116,9 @@ export const PRODUCTS: Product[] = [
     weightGrams: 184,
     servings: 2-3,
     marketplaceLinks: {
-      lazada: '',
-      shopee: '',
-      tiktok: '',
+      lazada: 'https://www.lazada.co.th/products/i16255690960.html',
+      shopee: 'https://shopee.co.th/product/1468323663/50116270546/',
+      tiktok: 'https://shop.tiktok.com/th/pdp/1737194690746483856',
     },
   },
 ];
@@ -444,6 +444,13 @@ export const FAQ_ITEMS: FaqItem[] = [
   //   answer: 'Traditional Italian culinary science dictates that conchiglie (shells) feature an inner cup and ribbed exterior specifically engineered to capture and hold dense cheese emulsions, delivering significantly more sauce per mouthful compared to straight smooth macaroni tubes.',
   //   category: 'Pasta Design',
   // },
+
+  {
+    id: 'faq-6',
+    question: 'Can I prepare MAC&CHEESE in the microwave?',
+    answer: 'Yes. Pour 500 ml of unsalted water into a suitable microwave-safe container and bring the water to a boil. Add the contents of the pouch and stir. Microwave at 800 W for approximately 9–11 minutes, until the water is fully absorbed. Cooking time may vary depending on your microwave. For an extra indulgent finish, you may add butter and grated Italian Parmesan cheese, then stir and serve.',
+    category: 'Preparation',
+  },
   {
     id: 'faq-5',
     question: 'How should the boxes be stored, and how many servings does each pack yield?',

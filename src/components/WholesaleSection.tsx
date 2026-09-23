@@ -119,7 +119,7 @@ export const WholesaleSection: React.FC = () => {
               </div>
 
               {/* Retail Partners */}
-              <div className="flex sm:block items-center gap-4">
+              {/* <div className="flex sm:block items-center gap-4">
                 <div
                   className="
                     w-10 h-10
@@ -144,10 +144,10 @@ export const WholesaleSection: React.FC = () => {
                     Stores & hospitality
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               {/* Partnership */}
-              <div className="flex sm:block items-center gap-4">
+              {/* <div className="flex sm:block items-center gap-4">
                 <div
                   className="
                     w-10 h-10
@@ -172,7 +172,7 @@ export const WholesaleSection: React.FC = () => {
                     Let's grow together
                   </p>
                 </div>
-              </div>
+              </div> */}
 
             </div>
           </div>
