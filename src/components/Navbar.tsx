@@ -30,7 +30,7 @@ export const Navbar: React.FC = () => {
     { label: 'How to Cook', href: '#how-to-cook' },
     { label: 'Product Details', href: '#detail-four-cheese' },
     { label: 'Where to Buy', href: '#coming-soon' },
-    { label: 'Before Your Experience', href: '#faq' },
+    { label: 'FAQ', href: '#faq' },
   ];
 
   const closeMobileMenu = () => {
