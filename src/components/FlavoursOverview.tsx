@@ -79,16 +79,24 @@ export const FlavoursOverview: React.FC = () => {
                     0{index + 1}
                   </span>
 
-                  {product.spiceLevel ? (
+                  {product.id === 'jalapenos' ? (
                     <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-red-700 bg-red-50 border border-red-200 px-2 py-0.5 rounded-full">
                       <Flame className="w-3 h-3 fill-red-500 text-red-500" />
                       Spicy Kick
                     </span>
-                  ) : (
-                    <span className="text-[11px] font-medium text-stone-500 bg-stone-50 border border-stone-200 px-2 py-0.5 rounded-full">
-                      Classic Craft
+                  ) : product.id === 'four-cheese' ? (
+                    <span className="inline-flex items-center text-[11px] font-medium text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full">
+                      Cheese Lover
                     </span>
-                  )}
+                  ) : product.id === 'tomato-mozzarella' ? (
+                    <span className="inline-flex items-center text-[11px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
+                      Italian Classic
+                    </span>
+                  ) : product.id === 'truffle-mushroom' ? (
+                    <span className="inline-flex items-center text-[11px] font-medium text-amber-950 bg-amber-50/70 border border-amber-900/20 px-2.5 py-0.5 rounded-full">
+                      Truffle Indulgence
+                    </span>
+                  ) : null}
                 </div>
 
                 {/* Product Image */}

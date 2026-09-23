@@ -5,8 +5,8 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: process.env.VITE_BASE_PATH || '/',
-    // base: '/macandcheese-thailand/',
+    // base: process.env.VITE_BASE_PATH || '/',
+    base: '/macandcheese-thailand/',
 
     plugins: [
       react(),
